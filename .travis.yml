@@ -21,28 +21,33 @@ install:
 script:
 - gitbook build
 deploy:
-  provider: pages
-  skip-cleanup: true
-  github-token: $GITHUB_TOKEN
+  provider: pages # deploy to GitHub Pages
+  skip_cleanup: true # don't clean generated site
+  github_token: $TOKEN # provide the encrypted token
   local-dir: ./docs/ ## 根据情况自定义到静态文件输出目录
-  target-branch: gh-pages
-  verbose: true
   on:
     branch: master
+  repo: ceeyang/FlutterInterview # optional, defaults to current repo
+  local_dir: public # optional, defaults to the current directory
+  target_branch: master # optional, defaults to "gh-pages"
+  email: yangxichuan2016@gmail.com # optional, defaults to "deploy@travis-ci.org"
+  name: Travis CI by ceeyang # optional, defaults to "Deployment Bot"
 
-# after_script:
-#    - cd docs
-#    - git init
-#    - git config user.name "hanyajun0123"
-#    - git config user.email "1581532052@qq.com"
-#    - git add .
-#    - git commit -m "Update Gitbook By TravisCI With Build $TRAVIS_BUILD_NUMBER"
-#    - git push --force --quiet "https://hanyajun0123:${CODING_TOKEN}@${CO_REF}" master:master
-#    - git tag v0.0.$TRAVIS_BUILD_NUMBER -a -m "Auto Taged By TravisCI With Build $TRAVIS_BUILD_NUMBER"
-#    - git push --quiet "https://hanyajun0123:${CODING_TOKEN}@${CO_REF}" master:master --tags
+after_script:
+   - list 
+  #  - cd docs
+  #  - git init
+  #  - git config user.name "Travis CI by ceeyang"
+  #  - git config user.email "1581532052@qq.com"
+  #  - git add .
+  #  - git commit -m "Update Gitbook By TravisCI With Build $TRAVIS_BUILD_NUMBER"
+  #  - git push --force --quiet "https://hanyajun0123:${CODING_TOKEN}@${CO_REF}" master:master
+  #  - git tag v0.0.$TRAVIS_BUILD_NUMBER -a -m "Auto Taged By TravisCI With Build $TRAVIS_BUILD_NUMBER"
+  #  - git push --quiet "https://hanyajun0123:${CODING_TOKEN}@${CO_REF}" master:master --tags
 
 # # git@git.dev.tencent.com:hanyajun0123/coding_basis_review.git
 # env:
 #  global:
 #    # Coding Pages
 #    - CO_REF: git.dev.tencent.com/hanyajun0123/coding_basis_review.git
+
