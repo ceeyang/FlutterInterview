@@ -28,10 +28,9 @@ deploy:
   on:
     branch: master
   repo: ceeyang/FlutterInterview # optional, defaults to current repo
-  local_dir: public # optional, defaults to the current directory
   target_branch: master # optional, defaults to "gh-pages"
   email: yangxichuan2016@gmail.com # optional, defaults to "deploy@travis-ci.org"
-  name: Travis CI by ceeyang # optional, defaults to "Deployment Bot"
+  name: ceeyang # optional, defaults to "Deployment Bot"
 
 after_script:
    - list 
