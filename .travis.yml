@@ -27,7 +27,7 @@ deploy:
   local-dir: ./docs/ ## 根据情况自定义到静态文件输出目录
   on:
     branch: master/docs
-  repo: ceeyang/FlutterInterview/docs # optional, defaults to current repo
+  repo: ceeyang/FlutterInterview/ # optional, defaults to current repo
   target_branch: master # optional, defaults to "gh-pages"
   email: yangxichuan2016@gmail.com # optional, defaults to "deploy@travis-ci.org"
   name: ceeyang # optional, defaults to "Deployment Bot"
