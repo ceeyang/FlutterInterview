@@ -1,0 +1,30 @@
+language: node_js
+node_js:
+  - "v12.13.1"
+branches:
+  only:
+  - master
+notifications:
+  email:
+    recipients:
+      - 64048861@qq.com
+    on_success: always # default: change
+    on_failure: always # default: alway
+cache:
+  directories:
+  - node_modules
+  yarn: true
+before_install:
+- export TZ='Asia/Shanghai'  # 设置时区
+install:
+ - npm install -g gitbook-cli
+script:
+- gitbook build ./ ./docs
+after_script:
+   - cd docs
+   - git init
+   - git config user.name "ceeyang"
+   - git config user.email "64048861@qq.com"
+   - git add .
+   - git commit -m "Update Gitbook By TravisCI With Build $TRAVIS_BUILD_NUMBER"
+   - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:gh-pages
