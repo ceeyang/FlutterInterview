@@ -1,0 +1,305 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Flutter 进阶 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="FlutterBase.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Flutter InterView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="FlutterBase.html">
+            
+                <a href="FlutterBase.html">
+            
+                    
+                    Flutter 基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="FlutterAdvanced.html">
+            
+                <a href="FlutterAdvanced.html">
+            
+                    
+                    Flutter 进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Flutter 进阶</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="flutter-&#x8FDB;&#x9636;">Flutter &#x8FDB;&#x9636;</h1>
+<h3 id="1-widget&#x3001;element&#x3001;renderobject&#x4E09;&#x8005;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;">1. Widget&#x3001;Element&#x3001;RenderObject&#x4E09;&#x8005;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;</h3>
+<p>Widget&#x4E0D;&#x662F;&#x771F;&#x6B63;&#x6E32;&#x67D3;UI&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x5B83;&#x53EA;&#x662F;Element&#x7684;&#x4E00;&#x4E2A;&#x914D;&#x7F6E;&#x63CF;&#x8FF0;&#xFF0C;&#x53BB;&#x544A;&#x77E5;Element&#x5E94;&#x8BE5;&#x5982;&#x4F55;&#x53BB;&#x6E32;&#x67D3;Widget &#x548C; Element &#x4E4B;&#x95F4;&#x662F; &#x2F00;&#x5BF9;&#x591A;&#x7684;&#x5173;&#x7CFB; &#x3002;RenderObject&#x624D;&#x662F;&#x5B9E;&#x9645;&#x6E32;&#x67D3;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;Element &#x6301;&#x6709; RenderObject &#x548C; Widget&#x3002;&#x2F24;&#x81F4;&#x603B;&#x7ED3;&#x4E09;&#x8005;&#x7684;&#x5173;&#x7CFB;&#x662F;&#xFF1A;&#x914D;&#x7F6E;&#x2F42;&#x4EF6; Widget &#x2F63;&#x6210;&#x4E86; Element&#xFF0C;&#x2F7D;&#x540E;&#x521B;&#x5EFA; RenderObject &#x5173;&#x8054;&#x5230; Element &#x7684;&#x5185;&#x90E8; renderObject &#x5BF9;&#x8C61;&#x4E0A;&#xFF0C;&#x6700;&#x540E;Flutter &#x901A;&#x8FC7; RenderObject &#x6570;&#x636E;&#x6765;&#x5E03;&#x5C40;&#x548C;&#x7ED8;&#x5236;&#x3002;</p>
+<h3 id="2-&#x901A;&#x8FC7;boxdecoration&#x548C;cliprrect&#x8BBE;&#x7F6E;&#x5706;&#x89D2;&#x6709;&#x4EC0;&#x4E48;&#x533A;&#x522B;">2. &#x901A;&#x8FC7;BoxDecoration&#x548C;ClipRRect&#x8BBE;&#x7F6E;&#x5706;&#x89D2;&#x6709;&#x4EC0;&#x4E48;&#x533A;&#x522B;</h3>
+<p>&#x4F7F;&#x7528;BoxDecoration&#x8BBE;&#x7F6E;&#x5706;&#x89D2;&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x5176;child&#x63A7;&#x4EF6;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5982;&#x679C;child&#x662F;&#x56FE;&#x7247;&#x6216;&#x8005;&#x4E5F;&#x6709;&#x80CC;&#x666F;&#x8272;&#x7684;&#x8BDD;&#x90A3;&#x4E48;&#x5706;&#x89D2;&#x6548;&#x679C;&#x5C31;&#x5931;&#x6548;&#x4E86;&#x3002;&#x800C;ClipRRect&#x662F;&#x4F1A;&#x5F71;&#x54CD;&#x5230;child&#x7684;&#xFF0C;&#x52A0;&#x4E86;&#x5706;&#x89D2;&#x540E;&#xFF0C;&#x4E5F;&#x4F1A;&#x7EA6;&#x675F;&#x5230;child&#x4EA7;&#x751F;&#x5706;&#x89D2;&#x6548;</p>
+<h3 id="3-flutter&#x4E0E;&#x539F;&#x751F;&#x901A;&#x4FE1;&#x7684;channel&#x6709;&#x54EA;&#x51E0;&#x79CD;">3. Flutter&#x4E0E;&#x539F;&#x751F;&#x901A;&#x4FE1;&#x7684;Channel&#x6709;&#x54EA;&#x51E0;&#x79CD;</h3>
+<p>Flutter&#x5B9A;&#x4E49;&#x4E86;&#x4E09;&#x79CD;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;Channel&#xFF0C;&#x5B83;&#x4EEC;&#x5206;&#x522B;&#x662F;&#xFF1A;</p>
+<blockquote>
+<ul>
+<li><strong>BasicMessageChannel</strong>&#xFF1A;&#x7528;&#x4E8E;&#x4F20;&#x9012;&#x5B57;&#x7B26;&#x4E32;&#x548C;&#x534A;&#x7ED3;&#x6784;&#x5316;&#x7684;&#x4FE1;&#x606F;&#x3002;</li>
+<li><strong>MethodChannel</strong>&#xFF1A;&#x7528;&#x4E8E;&#x4F20;&#x9012;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#xFF08;method invocation&#xFF09;&#x3002;</li>
+<li><strong>EventChannel</strong>: &#x7528;&#x4E8E;&#x6570;&#x636E;&#x6D41;&#xFF08;event streams&#xFF09;&#x7684;&#x901A;&#x4FE1;&#x3002;</li>
+</ul>
+</blockquote>
+<h3 id="4-flutter-&#x6027;&#x80FD;&#x4F18;&#x5316;">4. Flutter &#x6027;&#x80FD;&#x4F18;&#x5316;</h3>
+<p><a href="https://github.com/awesome-tips/Flutter-Tips/blob/master/articles/Flutter%20%20%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E2%80%94%E2%80%94%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8D%E5%BA%94%E7%94%A8%20jank.md" target="_blank">&#x6027;&#x80FD;&#x4F18;&#x5316;&#x2014;&#x2014;&#x5982;&#x4F55;&#x907F;&#x514D;&#x5E94;&#x7528; jank</a></p>
+<h3 id="5-flutter-&#x5982;&#x4F55;&#x6784;&#x5EFA;&#x89C6;&#x56FE;&#x7684;">5. Flutter &#x5982;&#x4F55;&#x6784;&#x5EFA;&#x89C6;&#x56FE;&#x7684;</h3>
+<p>&#x5728; Flutter &#x4E2D;&#xFF0C;Everything is Widget&#xFF0C;&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x6784;&#x9020;&#x51FD;&#x6570;&#x5D4C;&#x5957; Widget &#x6765;&#x7F16;&#x5199; UI &#x754C;&#x9762;&#x3002;&#x5B9E;&#x9645;&#x4E0A;&#xFF0C;Widget &#x5E76;&#x4E0D;&#x662F;&#x771F;&#x6B63;&#x8981;&#x663E;&#x793A;&#x5728;&#x5C4F;&#x5E55;&#x4E0A;&#x7684;&#x4E1C;&#x897F;&#xFF0C;&#x53EA;&#x662F;&#x4E00;&#x4E2A;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#xFF0C;&#x5B83;&#x6C38;&#x8FDC;&#x662F; immutable &#x7684;&#xFF0C;&#x5E76;&#x4E14;&#x53EF;&#x4EE5;&#x5728;&#x591A;&#x5904;&#x91CD;&#x590D;&#x4F7F;&#x7528;&#x3002;&#x90A3;&#x771F;&#x6B63;&#x6301;&#x6709;&#x201C;&#x5C4F;&#x5E55;&#x4E0A;&#x7684;&#x89C6;&#x56FE;&#x201D;/&#x201C;UI&#x63A7;&#x4EF6;&#x201D;&#x6811;&#x662F;&#x662F;&#x4EC0;&#x4E48;&#x5462;&#xFF1F;Element tree&#xFF01;</p>
+<blockquote>
+<ul>
+<li><strong>StatelessWidget:</strong>
+  &#x9996;&#x5148;&#x5B83;&#x4F1A;&#x8C03;&#x7528; StatelessWidget&#x7684; createElement &#x65B9;&#x6CD5;&#xFF0C;&#x5E76;&#x6839;&#x636E;&#x8FD9;&#x4E2A; widget &#x751F;&#x6210; StatelesseElement &#x5BF9;&#x8C61;&#x3002;&#x5C06;&#x8FD9;&#x4E2A; StatelesseElement &#x5BF9;&#x8C61;&#x6302;&#x8F7D;&#x5230; element &#x6811;&#x4E0A;&#x3002;StatelesseElement &#x5BF9;&#x8C61;&#x8C03;&#x7528; widget &#x7684; build &#x65B9;&#x6CD5;&#xFF0C;&#x5E76;&#x5C06; element &#x81EA;&#x8EAB;&#x4F5C;&#x4E3A; BuildContext &#x4F20;&#x5165;&#x3002;</li>
+<li><strong>StatefulWidget:</strong>
+  &#x9996;&#x5148;&#x540C;&#x6837;&#x4E5F;&#x662F;&#x8C03;&#x7528; StatefulWidget &#x7684; createElement &#x65B9;&#x6CD5;&#xFF0C;&#x5E76;&#x6839;&#x636E;&#x8FD9;&#x4E2A; widget &#x751F;&#x6210; StatefulElement &#x5BF9;&#x8C61;&#xFF0C;&#x5E76;&#x4FDD;&#x7559; widget &#x5F15;&#x7528;&#x3002;&#x5C06;&#x8FD9;&#x4E2A; StatefulElement &#x6302;&#x8F7D;&#x5230; Element &#x6811;&#x4E0A;&#x3002;&#x6839;&#x636E; widget&#x7684; createState &#x65B9;&#x6CD5;&#x521B;&#x5EFA; State&#x3002;StatefulElement &#x5BF9;&#x8C61;&#x8C03;&#x7528; state &#x7684; build &#x65B9;&#x6CD5;&#xFF0C;&#x5E76;&#x5C06; element &#x81EA;&#x8EAB;&#x4F5C;&#x4E3A; BuildContext &#x4F20;&#x5165;&#x3002;</li>
+</ul>
+</blockquote>
+<h3 id="6-flutter-&#x4E2D;-buildcontext-&#x662F;&#x4EC0;&#x4E48;">6. Flutter &#x4E2D; BuildContext &#x662F;&#x4EC0;&#x4E48;</h3>
+<p>BuildContext &#x5BF9;&#x8C61;&#x5B9E;&#x9645;&#x4E0A;&#x5C31;&#x662F; Element &#x5BF9;&#x8C61;&#xFF0C;BuildContext &#x63A5;&#x53E3;&#x7528;&#x4E8E;&#x963B;&#x6B62;&#x5BF9; Element &#x5BF9;&#x8C61;&#x7684;&#x76F4;&#x63A5;&#x64CD;&#x4F5C;&#x3002;</p>
+<h3 id="7-flutter-&#x72B6;&#x6001;&#x7BA1;&#x7406;&#x600E;&#x4E48;&#x505A;&#x7684;">7. Flutter &#x72B6;&#x6001;&#x7BA1;&#x7406;&#x600E;&#x4E48;&#x505A;&#x7684;</h3>
+<ul>
+<li>&#x4EC0;&#x4E48;&#x662F;&#x72B6;&#x6001;&#x7BA1;&#x7406;?<blockquote>
+<p>Flutter&#x4E2D;&#x53EA;&#x6709;StateFull&#x7C7B;&#x578B;&#x7684;Widget&#x624D;&#x6709;state,&#x901A;&#x8FC7;state&#x7BA1;&#x7406;widget&#x7684;&#x6837;&#x5F0F;&#x66F4;&#x65B0;&#xFF1B;&#x72B6;&#x6001;&#x7BA1;&#x7406;&#xFF0C;&#x987E;&#x540D;&#x601D;&#x4E49; &#x7BA1;&#x7406;&#x7684;&#x662F;&#x6570;&#x636E;&#x53D8;&#x5316;&#x548C;widget&#x7684;&#x66F4;&#x65B0;&#xFF1B;</p>
+</blockquote>
+</li>
+<li>&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x8FDB;&#x884C;&#x72B6;&#x6001;&#x7BA1;&#x7406;&#xFF1F;<blockquote>
+<p>&#x8DE8;widget&#x72B6;&#x6001;&#x66F4;&#x65B0;&#xFF1A;&#x901A;&#x77E5;&#x53E6;&#x5916;&#x4E00;&#x4E2A;widget&#x8FDB;&#x884C;&#x72B6;&#x6001;&#x66F4;&#x65B0;. &#x867D;&#x7136;&#x7EC4;&#x4EF6;&#x4E4B;&#x524D;&#x80FD;&#x76F4;&#x63A5;&#x4F20;&#x503C;,&#x4F46;&#x662F;&#x5982;&#x679C;&#x5B50;&#x7EC4;&#x4EF6;&#x6216;&#x8005;&#x7236;&#x7EC4;&#x4EF6;&#x592A;&#x591A;,&#x4EE3;&#x7801;&#x4F1A;&#x5E38;&#x7E41;&#x7410;&#x81C3;&#x80BF;&#xFF0C;&#x96BE;&#x4EE5;&#x590D;&#x7528;, &#x66F4;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x7EDF;&#x4E00;&#x7684;&#x7EC4;&#x4EF6;&#x72B6;&#x6001;&#x7BA1;&#x7406;&#x5DE5;&#x5177;</p>
+</blockquote>
+</li>
+<li>&#x5E38;&#x89C1;&#x7684;</li>
+<li>&#x4EE5;&#x4E0B;&#x662F; Flutter &#x72B6;&#x6001;&#x7BA1;&#x7406;&#x63D2;&#x4EF6;,&#x7528;&#x8FC7;&#x4E00;&#x4E24;&#x79CD;&#x90FD;&#x884C;<blockquote>
+<ul>
+<li><strong>Provider</strong></li>
+<li><strong>redux</strong></li>
+<li><strong>fish_redux</strong></li>
+<li><strong>Mobx</strong>: &#x4F7F;&#x7528;&#x900F;&#x660E;&#x7684;&#x51FD;&#x6570;&#x54CD;&#x5E94;&#x5F0F;&#x7F16;&#x7A0B;&#x589E;&#x5F3A;Dart&#x7A0B;&#x5E8F;&#x4E2D;&#x7684;&#x72B6;&#x6001;&#x7BA1;&#x7406;<blockquote>
+<ul>
+<li>Observables: &#x8868;&#x793A;&#x54CD;&#x5E94;&#x5F0F;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x4E5F;&#x53EF;&#x7406;&#x89E3;&#x4E3A;&#x53EF;&#x89C2;&#x5BDF;&#x5BF9;&#x8C61;&#x3002;&#x72B6;&#x6001;&#x6307;&#x7684;&#x662F;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x91CC;&#x9762;&#x7684;&#x72B6;&#x6001;&#x6216;&#x8005;&#x6570;&#x636E;&#x3002;&#x54CD;&#x5E94;&#x5F0F;&#x5C31;&#x662F;&#x53EF;&#x4EE5;&#x611F;&#x77E5;&#x5230;&#x3001;&#x53EF;&#x89C2;&#x5BDF;&#x5230;&#x6570;&#x636E;&#x7684;&#x53D8;&#x5316;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x7ECF;&#x5E38;&#x63A5;&#x89E6;&#x5230;&#x7684;&#x89C2;&#x5BDF;&#x8005;&#x6A21;&#x5F0F;&#x3002;</li>
+<li>Actions: Actions&#x5C31;&#x662F;&#x4E00;&#x7CFB;&#x5217;&#x53EF;&#x4EE5;&#x5F15;&#x53D1;&#x72B6;&#x6001;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x7684;&#x52A8;&#x4F5C;&#x3002;</li>
+<li>Reactions: &#x72B6;&#x6001;&#x7684;&#x89C2;&#x5BDF;&#x8005;&#xFF0C;&#x72B6;&#x6001;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4ED6;&#x4EEC;&#x53EF;&#x4EE5;&#x6536;&#x5230;&#x6570;&#x636E;&#x53D8;&#x5316;&#x7684;&#x901A;&#x77E5;&#x3002;</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="FlutterBase.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Flutter 基础">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Flutter 进阶","level":"1.3","depth":1,"previous":{"title":"Flutter 基础","level":"1.2","depth":1,"path":"FlutterBase.md","ref":"FlutterBase.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"FlutterAdvanced.md","mtime":"2021-09-26T07:10:40.053Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-09-26T07:11:22.697Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
